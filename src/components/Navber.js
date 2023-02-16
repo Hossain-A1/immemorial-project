@@ -13,8 +13,8 @@ const Navber = () => {
   const logoArr = [logo];
 
   useGsapDownStagger(listAdd, 0.2);
-  useGsapDownStagger(logoArr, 3);
-  useGsapDownStagger(fevArr, 4);
+  useGsapDownStagger(logoArr, 2.5);
+  useGsapDownStagger(fevArr, 3);
   return (
     <nav className="navber wrapper">
       <ul className="links">
