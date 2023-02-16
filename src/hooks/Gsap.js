@@ -52,34 +52,89 @@ export const useGsapPhotoOrapping = (photos) => {
   useEffect(() => {
     const element = photos.map((photo) => photo.current);
 
-    gsap.fromTo(element, {
-      y: '-100vh',
-      scale: 0
-    }, {
-      y:0,
-      scale:1,
-      duration:2,
-      stagger:0.4,
-      delay: 2.2,
-      ease:Expo.easeInOut
-    });
+    gsap.fromTo(
+      element,
+      {
+        y: "-100vh",
+        scale: 0,
+      },
+      {
+        y: 0,
+        scale: 1,
+        duration: 2,
+        stagger: 0.4,
+        delay: 2.2,
+        ease: Expo.easeInOut,
+      }
+    );
   }, []);
 };
 
-export const useGsapPhotoLevitate = (arr,trig)=>{
-  useEffect(()=>{
-    const elelment = arr.map((ar)=>ar.current);
-    gsap.fromTo(elelment,{
-      y:0
-    },{
-      y:'-50%',
-      ease: Expo.easeInOut,
-      scrollTrigger:{
-        trigger:trig.current,
-        scrub:1,
-        toggleActions: 'play reverse play reverse'
+export const useGsapPhotoLevitate = (arr, trig) => {
+  useEffect(() => {
+    const elelment = arr.map((ar) => ar.current);
+    gsap.fromTo(
+      elelment,
+      {
+        y: 0,
+      },
+      {
+        y: "-50%",
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          scrub: 1,
+          toggleActions: "play reverse play reverse",
+        },
       }
-    })
+    );
+  });
+};
+// feature is here//
+export const useGsapLeftShutterFeatureUnveil = (item, trig) => {
+  useEffect(() => {
+    const elelment = item.current;
 
-  })
-}
+    gsap.fromTo(
+      elelment,
+      {
+        height: "100%",
+      },
+      {
+        height: 0,
+        duration: 1.3,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
+
+export const useGsapRightShutterFeatureUnveil = (item, trig) => {
+  useEffect(() => {
+    const elelment = item.current;
+
+    gsap.fromTo(
+      elelment,
+      {
+        width: "100%",
+      },
+      {
+        width: 0,
+        duration:1.3,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          start: "top center",
+          end: "bottom center",
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
