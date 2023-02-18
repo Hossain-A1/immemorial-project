@@ -33,8 +33,8 @@ const Navber = () => {
           <h2>Immemorial</h2>
         </Link>
       </div>
-      <div className="favourite-link" ref={fevRef}>
-        <Link to="/favourites">Favourites</Link>
+      <div className="blog-link" ref={fevRef}>
+        <Link to="/blog">Blog</Link>
       </div>
     </nav>
   );
