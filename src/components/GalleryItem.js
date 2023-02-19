@@ -2,7 +2,7 @@ import { useRef } from "react";
 import {useGsapGalleryTitle,useGsapGalleryCategory,useGsapGalleryImage} from '../hooks/Gsap'
 
 
-const GalleryItem = ({image}) => {
+  const GalleryItem = ({image}) => {
   const galleryTitleRef = useRef(null)
   const galleryCategoryRef = useRef(null)
   const galleryImageRef = useRef(null)

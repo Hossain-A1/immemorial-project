@@ -288,3 +288,16 @@ section {
   letter-spacing: 2px;
   text-transform: capitalize;
 }
+/* Blog is here */
+.blog{
+  padding-top: 5vw;
+}
+.blog p{
+  padding-bottom: 2vw;
+  text-align: justify;
+  color: #626262;
+}
+.not-found-img{
+  height: 100%;
+  width: 100%;
+}

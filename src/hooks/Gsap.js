@@ -233,3 +233,48 @@ export const useGsapFooterAnimate = (item, trig) => {
     );
   }, []);
 };
+
+// not found images are here//
+export const useGsapNotFoundTitle = (item,trig)=>{
+ useEffect(()=>{
+  const elelment = item.current;
+
+  gsap.fromTo(elelment,{
+    x:'40%'
+  },{
+    x: 0,
+    duration:1,
+    ease:Expo.easeInOut,
+    scrollTrigger:{
+      trigger:trig.current,
+      toggleActions:'play reverse play reverse'
+    }
+  })
+ },[])
+}
+
+export const useGsapNotFounImage = (item)=>{
+ useEffect(()=>{
+  const element = item.current;
+
+
+  gsap.fromTo(
+    element,
+    {
+      x: 0,
+    },
+    {
+      x: "30%",
+      width: "100%",
+      duration: 1,
+      ease: Expo.easeInOut,
+      scrollTrigger: {
+        trigger: element,
+        start: "top center",
+        end: "bottom top",
+        toggleActions: "paly reverse play reverse",
+      },
+    }
+  );
+ },[])
+}
